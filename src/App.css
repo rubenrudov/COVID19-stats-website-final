@@ -1,0 +1,78 @@
+* {
+  margin: 0;
+}
+
+body {
+  background-color: #f5f6fa;
+}
+
+.App {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: #f5f6fa;
+  padding: 20px;
+}
+
+.topbar {
+  font-size: 14px;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 22px;
+  align-items: center;
+} 
+
+.topbar-left {
+  display: flex;
+}
+
+.topbar-left .fa-icon {
+  font-size: 24px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+
+.topbar > h1 {
+  color: #252525;
+  font-size: 22px;
+}
+
+.spinner {
+  background-color: white;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-between;
+}
+
+.left-container {
+  flex: 0.9;
+}
+
+.right-container {
+  border: 15px solid rgb(218, 218, 218);
+  border-radius: 25px;
+}
+
+.info {
+  padding: 15px;
+  border-radius: 25px;
+}
+
+.info > h3 {
+  color: #252525;
+  font-weight: 400;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.info > h3:last-of-type {
+  margin-top: 1rem;
+}
+
+@media (max-width: 990px) {
+  .App {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+}
+
+.footer {
+    display: flex;
+}
+
+.links {
+    text-align: center;
+    display: flex;
+}
+
+.link-item {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.icon {
+    font-size: 20px;
+}
+
+.github {
+    color: rgb(245, 127, 48)
+}
+
+.instagram {
+    color: rgb(146, 20, 168)
+}
+
+.facebook {
+    color: rgb(0, 0, 179);
+}
+
+.linkedin {
+    color: rgb(92, 92, 235);
+}
+
+.link-item:hover {
+    opacity: 0.6;
+    font-size: 18px;
+    transition: all ease 0.5s;
+}
+
+.credits {
+    padding-right: 6    0px;
+    font-size: 20px;
+    font-weight: bold;
+    align-items: center;
+}

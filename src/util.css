@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+}
+
+.name {
+    font-size: 22px;
+}
+
+.confirmed {
+    color: rgb(178, 0, 0);
+    font-size: 16px;
+}
+
+.recovered {
+    color: rgb(0, 178, 0);
+    font-size: 16px;
+}
+
+.deaths {
+    color: #888888;
+    font-size: 16px;
+}
+
+.info-flag img {
+    padding: 15px;
+    align-items: center;
+    text-align: center;
+    height: 60px;
+    width: fit-content;
+}
