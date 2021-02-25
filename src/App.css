@@ -21,6 +21,10 @@ body {
   align-items: center;
 } 
 
+.topbar:hover {
+  cursor: pointer;
+}
+
 .topbar-left {
   display: flex;
 }
@@ -51,7 +55,6 @@ body {
 }
 
 .right-container {
-  border: 15px solid rgb(218, 218, 218);
   border-radius: 25px;
 }
 
@@ -74,5 +77,29 @@ body {
 @media (max-width: 990px) {
   .App {
     flex-direction: column;
+    font-size: 10px;
   }
+}
+
+.spinner-flag {
+  height: 20px;
+  width: 30px;
+  float: right;
+  padding-right: 15px;
+}
+
+.menu-item {
+  display: grid;
+  justify-content: space-between;
+}
+
+td {
+  padding: 0.5rem;
+  border: none;
+}
+
+.articles {
+  display: flex;
+  flex-direction: column;
+  padding-top: 15px;
 }

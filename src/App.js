@@ -9,6 +9,17 @@ import Footer from './Footer'
 import "leaflet/dist/leaflet.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMeteor, faGlobeEurope } from '@fortawesome/free-solid-svg-icons'
+import ArticleBox from './ArticleBox'
+import img1 from './assets/vaccine.png'
+import img2 from './assets/mask_wearing.png'
+import img3 from './assets/washing_hands.jpg'
+
+var border = {
+  border: "solid 10px DodgerBlue",
+  borderRadius: "30px",
+  textAlign: "center",
+  padding: "20px",
+}
 
 const App = () => {
   const [country, setInputCountry] = useState("worldwide");
@@ -17,8 +28,9 @@ const App = () => {
   const [casesType, setCasesType] = useState("cases");
   const [tableData, setTableData] = useState([]);
   const [mapCountries, setMapCountries] = useState([]);
-  const [mapCenter, setMapCenter] = useState({ lat: 34.80746, lng: -40.4796 });
+  const [mapCenter] = useState({ lat: 34.80746, lng: -40.4796 });
   const [mapZoom, setMapZoom] = useState(4);
+  const [] = useState();
 
 
   useEffect(() => {
@@ -37,6 +49,7 @@ const App = () => {
           var countries = data.map((country) => ({
             name: country.country,
             value: country.countryInfo.iso3,
+            flag: country.countryInfo.flag
           }));
           let sortedData = sortData(data);
           setCountries(countries);
@@ -58,8 +71,7 @@ const App = () => {
     .then((data) => {
       setInputCountry(countryCode);
       setCountryInfo(data);
-      setMapCenter([data.countryInfo.lat, data.countryInfo.long]);
-      setMapZoom(1);
+      setMapZoom(4);
     });
   };
 
@@ -70,18 +82,25 @@ const App = () => {
           <div className="topbar">
               <div className="topbar-left">
                 <FontAwesomeIcon className="fa-icon" icon={faGlobeEurope} />
-                <u><h1>COVID-19 STATS TRACKER</h1></u>
+                <u><h1>COVID-19 world map</h1></u>
                 <FontAwesomeIcon className="fa-icon" icon={faMeteor} />
               </div>
               <FormControl className="spinner">
                 <Select
                   variant="outlined"
-                  value={country}
+                  value={country.name}
                   onChange={onCountryChange}
                 >
                   <MenuItem value="worldwide">Worldwide</MenuItem>
                   {countries.map((country) => (
-                    <MenuItem value={country.value}>{country.name}</MenuItem>
+                    <MenuItem className="menu-item" value={country.value}>
+                      <tr>
+                        <td><img className="spinner-flag" src={country.flag}/></td>
+                        <td>
+                        {country.name}
+                        </td>
+                      </tr>
+                      </MenuItem>
                   ))}
                 </Select>
               </FormControl>
@@ -93,12 +112,12 @@ const App = () => {
             zoom={mapZoom}
         /> 
 
-<div className="stats">
+        <div className="stats">
             <InfoBox
                 onClick={(e) => setCasesType("cases")}
                 title="Coronavirus Cases"
                 color="red"
-                active={casesType === "cases"}
+                active
                 cases={countryInfo.todayCases}
                 total={countryInfo.cases}
                 type="cases"
@@ -107,7 +126,7 @@ const App = () => {
                 onClick={(e) => setCasesType("recovered")}
                 title="Coronavirus recovered"
                 color="green"
-                active={casesType === "recovered"}
+                active
                 cases={countryInfo.todayRecovered}
                 total={countryInfo.recovered}
                 type="recovered"
@@ -116,7 +135,7 @@ const App = () => {
                 onClick={(e) => setCasesType("deaths")}
                 title="Deaths"
                 color="black"
-                active={casesType === "deaths"}
+                active
                 cases={countryInfo.todayDeaths}
                 total={countryInfo.deaths}
                 type="deaths"
@@ -125,17 +144,35 @@ const App = () => {
       </div>
       <br/>
       <div className="right-container">
-        <Card >
+        <Card style={border}>
           <CardContent>
             <div className="info">
             <h3><center><strong><u>Live Cases by Country</u></strong></center></h3>
               {<Table countries={tableData}/>}
-              <h3><center><strong><u>Worldwide new {casesType}</u></strong></center></h3>
             </div>
           </CardContent>
         </Card>
+
+        {/* Here goes the cards that contains the articles ... */}
+        <div className="articles">
+          <ArticleBox
+            text="Go get vaccinated"
+            imgPath={img1}
+            color="purple"
+          />
+          <br/>
+          <ArticleBox 
+            text="Wear a mouth-nose mask outside home"
+            imgPath={img2}
+          />
+          <br/>
+          <ArticleBox 
+            text="Wash you hands"
+            imgPath={img3}
+          />
+        </div>
       </div>
-      <Footer/>
+      {/*<Footer/>*/}
     </div>
   );
 }

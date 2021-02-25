@@ -11,6 +11,7 @@ function Table({ countries }) {
           <td>
             <strong>{numeral(country.cases).format("0, 0")}</strong>
           </td>
+          <td><a href={`https://www.google.com/search?q=${country.country}`}><img className="table-flag" src={country.countryInfo.flag}/></a></td>
         </tr>
       ))}
     </div>

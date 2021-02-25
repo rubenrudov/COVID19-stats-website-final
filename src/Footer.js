@@ -28,34 +28,44 @@ function Footer() {
         <div className="footer">
             <div style={phantom} />
             <div className="links" style={style}>
-                <p className="credits">&copy; Ruben Rudov</p>
+                <p className="credits">&copy; Ruben Rudov & Adam Livne</p>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <p className="credits">Social accounts for contacting:</p>
                 <div className="link-item">
                     <a className="icon github" href="https://www.github.com/rubenrudov/">
                         <FontAwesomeIcon icon={faGithubAlt}/>
                     </a>
                     <br/>
-                    <p className="github">Github</p>
+                    <p className="github">Ruben's Github</p>
                 </div>
                 <div className="link-item">
                     <a className="icon instagram" href="https://www.instagram.com/rudovruben/">
                         <FontAwesomeIcon icon={faInstagram}/>
                     </a>
                     <br/>
-                    <p className="instagram">Instagram</p>
+                    <p className="instagram">Ruben's Instagram</p>
                 </div>
                 <div className="link-item">
-                    <a className="icon facebook" href="https://www.instagram.com/rudovruben/">
-                        <FontAwesomeIcon icon={faFacebook}/>
-                    </a>
-                    <br/>
-                    <p className="facebook">Facebook</p>
-                </div>
-                <div className="link-item">
-                    <a className="icon linkedin" href="https://www.instagram.com/rudovruben/">
+                    <a className="icon linkedin" href="https://www.linkedin.com/in/ruben-rudov-106a22204/">
                         <FontAwesomeIcon icon={faLinkedin}/>
                     </a>
                     <br/>
-                    <p className="linkedin">Linkedin</p>
+                    <p className="linkedin">Ruben's Linkedin</p>
+                </div>
+
+                <div className="link-item">
+                    <a className="icon github" href="https://www.github.com/adamal92/">
+                        <FontAwesomeIcon icon={faGithubAlt}/>
+                    </a>
+                    <br/>
+                    <p className="github">Adam's Github</p>
+                </div>
+                <div className="link-item">
+                    <a className="icon instagram" href="https://www.instagram.com/adamlivne/">
+                        <FontAwesomeIcon icon={faInstagram}/>
+                    </a>
+                    <br/>
+                    <p className="instagram">Adam's Instagram</p>
                 </div>
             </div>
         </div>

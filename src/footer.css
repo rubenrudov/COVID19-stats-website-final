@@ -1,14 +1,17 @@
 * {
     margin: 0;
+    
 }
 
 .footer {
+    text-align: center;
     display: flex;
 }
 
 .links {
     text-align: center;
     display: flex;
+    position: fixed;
 }
 
 .link-item {
@@ -43,8 +46,21 @@
 }
 
 .credits {
-    padding-right: 6    0px;
+    padding-right: 0px;
     font-size: 20px;
     font-weight: bold;
     align-items: center;
+}
+
+@media (max-width: 990px) {
+    .credits {
+      flex-direction: column;
+      font-size: 10px;
+    
+    }
+    .link-item:hover {
+        opacity: 0.6;
+        font-size: 10px;
+        transition: all ease 0.5s;
+    }
 }

@@ -1,0 +1,20 @@
+* {
+    margin: 0;
+}
+
+.content-blue {
+    border: solid 5px blue !important;
+}
+
+.content-purple {
+    padding-top: 15px !important;
+    text-align: center !important;
+}
+
+.image-vector {
+    height: 40px;
+    width: 40px;
+}
+
+
+

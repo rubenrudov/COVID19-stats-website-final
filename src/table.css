@@ -1,6 +1,5 @@
 .table {
     padding-right: 5px;
-    border-radius: 20px;
     margin-top: 20px;
     overflow: scroll;
     color: #000000;
@@ -10,8 +9,21 @@
 }
   
 .table tr {
-    display: flex;
+    display: grid;
     justify-content: space-between;
+}
+
+.table tr:nth-of-type(odd):hover {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    transition: all ease-in-out 0.5s;
+    box-shadow: 1px 1px 1px 1px rgb(194, 189, 189);
+}
+
+.table tr:nth-of-type(even):hover {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    transition: all ease-in-out 0.5s;
 }
   
 .table td {
@@ -22,6 +34,14 @@
 .table tr:nth-of-type(odd) {
     background-color: rgb(182, 182, 182);
     color: #FFFFFF;
+}
+
+.table tr:nth-of-type(odd) td{
+    color: #FFFFFF;
+}
+
+.table tr:nth-of-type(even) td{
+    color: #777;
 }
 
 ::-webkit-scrollbar {
@@ -47,4 +67,8 @@
 ::-webkit-scrollbar-thumb:hover {
     background-color: rgb(182, 182, 182);
     transition: 0.5s ease-in-out;
+}
+
+.table-flag {
+    width: 20%;
 }

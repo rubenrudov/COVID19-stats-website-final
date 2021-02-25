@@ -1,9 +1,10 @@
 import React from "react";
 import { Card, CardContent, Typography } from "@material-ui/core";
 import './infobox.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 
 function InfoBox({ title, cases, total, color, active, type, ...props }) {
-    console.log(title, active);
     return (
       <Card
         onClick={props.onClick}
@@ -17,7 +18,7 @@ function InfoBox({ title, cases, total, color, active, type, ...props }) {
             {cases} {type} today
             </h2>  
           <Typography className="infoBox__total" color="textSecondary">
-            {total} Total
+            <p>{total} Total</p>
           </Typography>
         </CardContent>
       </Card>
