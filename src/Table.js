@@ -8,10 +8,8 @@ function Table({ countries }) {
       {countries.map((country) => (
         <tr>
           <td>{country.country}</td>
-          <td>
-            <strong>{numeral(country.cases).format("0, 0")}</strong>
-          </td>
-          <td><a href={`https://www.google.com/search?q=${country.country}`}><img className="table-flag" src={country.countryInfo.flag}/></a></td>
+          <td>{numeral(country.cases).format('0,0')}</td>
+          <td><img class="table-flag" src={country.countryInfo.flag}/></td>
         </tr>
       ))}
     </div>

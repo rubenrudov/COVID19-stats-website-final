@@ -2,9 +2,12 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="./src/assets/virus-logo.svg" type="image/svg+xml" />
+    <link href="/your-path-to-fontawesome/css/fontawesome.css" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="./index.css"
+    />
     <meta name="theme-color" content="#000000" />
     <meta
       name="description"
@@ -15,7 +18,36 @@
     <title>COVID-19 TRACKER</title>
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <section class="colored-section" id="title">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+          <a class="navbar-brand" href="https://github.com/Ruby-Adam-softwares" style="color: white;">COVID-19 tracking website</a>
+          </button>
+        </nav>
+
+        <div class="row">
+          <div class="col-lg-6">
+            <a href="https://rubyadam-df256.firebaseapp.com/">
+              <button
+                class="button"
+                type="button"
+              >
+                Download our app for Israel Covid-19 stats
+              </button>
+            </a>
+          </div>
+          <br>
+          <div class="col-lg-6" style="overflow: hidden;">
+          <br>
+            <img
+              class="title-image"
+              src="banner.jpg"
+              alt="iphone-mockup"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
     <div id="root"></div>
   </body>
 </html>

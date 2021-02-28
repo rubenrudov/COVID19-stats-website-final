@@ -1,0 +1,349 @@
+* {
+  margin: 0;
+  text-decoration: none;
+}
+
+p {
+  margin: 0;
+}
+
+body {
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 800;
+}
+
+.button {
+  padding: 0.55rem 1.2rem;
+  border: none;
+  outline: none;
+  appearance: none;
+  border-radius: 1rem;
+  background: rgb(0, 134, 0);
+  color: #fafafa;
+  font-size: 20px;
+  transition: all ease 0.7s;
+}
+.button:hover {
+  cursor: pointer;
+  padding-right: 30px;
+  padding-left: 30px;
+}
+
+#title {
+  background-color: dodgerblue;
+  color: #fff;
+  text-align: left;
+}
+
+#title .container-fluid {
+  padding: 3% 15% 7%;
+}
+
+.colored-section {
+  background-color: dodgerblue;
+}
+
+
+/* Navigation Bar */
+
+.navbar {
+  padding: 0 0 4.5rem;
+  overflow: hidden;
+}
+
+.navbar-brand {
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.nav-item {
+  padding: 0 18px;
+}
+
+.nav-link {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.title-image {
+  border-radius: 40px;
+  overflow: hidden;
+}
+
+@media (min-width: 1921px) {
+  .container-fluid {
+    padding: 4% 22%;
+  }
+
+  .title-image {
+    width: 35vw;
+  }
+
+  .card {
+    height: 450px;
+  }
+
+  .nav-link {
+    font-size: 1.3rem;
+  }
+}
+
+@media (min-width: 2220px) {
+  .title-image {
+    width: 30vw;
+  }
+}
+
+@media (min-width: 2492px) {
+  .title-image {
+    width: 25vw;
+  }
+}
+
+@media (max-width: 1688px) {
+  .title-image {
+    position: static;
+    transform: rotate(0);
+  }
+
+  .big-heading {
+    font-size: 2.4rem;
+  }
+
+  .card {
+    height: 500px;
+  }
+}
+
+@media (max-width: 1500px) {
+  #graph-title,
+  .table-title,
+  #table-par,
+  #tableCountry,
+  #chart-type {
+    font-size: 1rem;
+  }
+
+  .data-info,
+  .graph-info {
+    height: 610px;
+  }
+
+  .nav-link {
+    font-size: 0.8rem;
+  }
+
+  .navbar-brand {
+    font-size: 2.1rem;
+  }
+}
+
+@media (max-width: 1241px) {
+  .nav-link {
+    font-size: 0.7rem;
+  }
+
+  .carousel-multi-item .col-md-4 {
+    width: 50%;
+  }
+
+  .card {
+    height: 360px;
+  }
+}
+
+@media (max-width: 1072px) {
+  .navbar-brand {
+    font-size: 2rem;
+  }
+
+  #graph-title,
+  .table-title {
+    font-size: 1.2rem;
+  }
+
+  .global-title {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 1028px) {
+  #graph-title,
+  .table-title {
+    font-size: 1.2rem;
+  }
+
+  .title-image {
+    width: 35vw;
+  }
+
+  .navbar-brand {
+    font-size: 1.9rem;
+  }
+
+  .card {
+    height: 390px;
+  }
+
+  #title {
+    text-align: center;
+  }
+
+  .big-heading {
+    font-size: 2.1rem;
+  }
+
+  .graph-info {
+    margin-left: 0px;
+  }
+}
+
+@media (max-width: 991px) {
+  .nav-link {
+    font-size: 1.1rem;
+  }
+
+  .title-image {
+    width: 100%;
+  }
+}
+
+@media (max-width: 829px) {
+  .tabs-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .global-stats {
+    width: 100%;
+    margin: 5px 0px;
+  }
+
+  .search-outer {
+    margin-top: 15px;
+    flex-direction: column;
+  }
+
+  .col-md-6.search-container,
+  .col-md-6#updated {
+    max-width: 100%;
+  }
+
+  .progress-container {
+    margin-top: 12px;
+  }
+
+  #updated {
+    margin-top: 10px;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 769px) {
+  .container-fluid {
+    padding: 7% 2%;
+  }
+
+  .card {
+    height: 400px;
+  }
+
+  #copy {
+    font-size: 0.7rem;
+  }
+
+  #graph-title,
+  .table-title {
+    font-size: 1.2rem;
+  }
+
+  .graph-info {
+    margin-top: 25px;
+  }
+}
+
+@media (max-width: 615px) {
+  .navbar-brand {
+    font-size: 1.4rem;
+  }
+
+  .card {
+    height: 460px;
+  }
+
+  #graph-title,
+  .table-title,
+  #table-par,
+  #tableCountry,
+  #chart-type {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 535px) {
+  .card {
+    height: 500px;
+  }
+}
+
+@media (max-width: 470px) {
+  .navbar-brand {
+    font-size: 0.9rem;
+  }
+
+  .data-info {
+    height: 628px;
+  }
+
+  .carousel-multi-item .col-md-4 {
+    width: 100%;
+  }
+
+  .card {
+    height: 330px;
+  }
+}
+
+@media (max-width: 399px) {
+  #graph-title,
+  .table-title,
+  #table-par,
+  #tableCountry,
+  #chart-type {
+    font-size: 0.7rem;
+  }
+
+  .card {
+    height: 360px;
+  }
+}
+
+@media (max-width: 320px) {
+  .navbar-brand {
+    font-size: 0.6rem;
+  }
+
+  #table_wrapper {
+    font-size: 0.8rem;
+  }
+
+  .data-info {
+    height: 580px;
+  }
+}
+
+@media (max-width: 300px) {
+  .card {
+    height: 410px;
+  }
+}

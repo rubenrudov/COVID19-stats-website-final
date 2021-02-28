@@ -3,45 +3,50 @@
     margin-top: 20px;
     overflow: scroll;
     color: #000000;
+    align-items: center;
+    text-align: center;
+    align-content: center;
     background-color: white;
     height: 400px;
     overflow-x: hidden;
 }
+
+.table tr:first-child {
+    align-items: center;
+    text-align: center;
+    align-content: center;
+    border-top: solid 2px #888;
+}
   
 .table tr {
-    display: grid;
+    align-items: center;
+    text-align: center;
+    align-content: center;
+    display: flex;
     justify-content: space-between;
-}
-
-.table tr:nth-of-type(odd):hover {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    transition: all ease-in-out 0.5s;
-    box-shadow: 1px 1px 1px 1px rgb(194, 189, 189);
-}
-
-.table tr:nth-of-type(even):hover {
-    padding-top: 10px;
-    padding-bottom: 10px;
+    border-right: solid 2px #888;
+    border-left: solid 2px #888;
+    border-bottom: solid 2px #888;
     transition: all ease-in-out 0.5s;
 }
-  
-.table td {
-    padding: 0.5rem;
-    border: none;
-}
-  
-.table tr:nth-of-type(odd) {
-    background-color: rgb(182, 182, 182);
-    color: #FFFFFF;
+
+.table tr:hover {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    cursor: pointer;
 }
 
-.table tr:nth-of-type(odd) td{
-    color: #FFFFFF;
+/*
+.table tr:hover .table-flag {
+    transition: 0.7s;
 }
+*/
 
-.table tr:nth-of-type(even) td{
-    color: #777;
+
+.table tr  td, th {
+  color: rgb(138, 138, 138) !important;
+  font-size: 15px im !important;
+  border: none;
 }
 
 ::-webkit-scrollbar {
@@ -70,5 +75,7 @@
 }
 
 .table-flag {
-    width: 20%;
+    border-radius: 4px;
+    height: 30px;
+    width: 50px;
 }

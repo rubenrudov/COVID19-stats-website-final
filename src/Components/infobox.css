@@ -1,10 +1,8 @@
 .infoBox {
-    flex: 1;
-    margin: 20px;
-}
-  
-.infoBox:not(:last-child) {
-    margin-right: 10px;
+  border: solid 1px #000;
+  flex: 1;
+  margin: 20px;
+  transition: all ease-in-out 1s;
 }
   
 .infoBox--selected {
@@ -48,4 +46,19 @@
 
 .infoBox__total:hover p{
   cursor: pointer;
+}
+
+.red:hover{
+  transition: all ease 0.5s;
+  border: solid 10px #cc1034;
+}
+
+.green:hover{
+  transition: all ease 0.5s;
+  border: solid 10px rgb(13, 192, 13);
+}
+
+.black:hover {
+  transition: all ease 0.5s;
+  border: solid 10px rgb(34, 34, 34);
 }

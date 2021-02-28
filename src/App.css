@@ -1,5 +1,6 @@
 * {
   margin: 0;
+  overflow-x: hidden;
 }
 
 body {
@@ -7,10 +8,15 @@ body {
 }
 
 .App {
+  justify-content: space-around;
+}
+
+.sides-containers {
   display: flex;
   justify-content: space-evenly;
   background-color: #f5f6fa;
   padding: 20px;
+  border-bottom: solid 1px #DDD;
 }
 
 .topbar {
@@ -21,7 +27,7 @@ body {
   align-items: center;
 } 
 
-.topbar:hover {
+.topbar:hover p{
   cursor: pointer;
 }
 
@@ -74,23 +80,25 @@ body {
   margin-top: 1rem;
 }
 
-@media (max-width: 990px) {
-  .App {
-    flex-direction: column;
-    font-size: 10px;
-  }
+.spinner-flag {
+  height: 20px !important;
+  width: 30px !important;
+  float: right !important;
+  padding-right: 15px !important;
 }
 
-.spinner-flag {
-  height: 20px;
-  width: 30px;
-  float: right;
-  padding-right: 15px;
+.info-box-flag {
+  height: 200px !important;
+  width: 300px !important;
+}
+
+.country-name-title {
+  font-size: 30px !important;
 }
 
 .menu-item {
-  display: grid;
-  justify-content: space-between;
+  display: grid !important;
+  justify-content: space-between !important;
 }
 
 td {
@@ -102,4 +110,75 @@ td {
   display: flex;
   flex-direction: column;
   padding-top: 15px;
+}
+
+footer {
+  padding: 15px;
+  background-color: dodgerblue;
+  color: #FFF;
+  font-size: 24px !important;
+  width: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+footer p {
+  font-size: 18px !important;
+}
+
+.footer-fa-icon {
+  font-size: 24px !important;
+  transition: 0.6s ease-in-out !important;
+} 
+
+.footer-fa-icon:hover {
+  cursor: pointer !important;
+  color: gold !important;
+}
+
+.covid-logo {
+  height: 20px;
+}
+
+.graphs-container {
+  padding: 100px;
+  display: flex;
+  flex-direction: column;
+  border-bottom: solid 1px #DDD;
+}
+
+@media (max-width: 1100px) {
+  .sides-containers {
+    flex-direction: column;
+  }
+
+  center h1 {
+    color: transparent;
+  }
+
+  .sides-containers p {
+    font-size: 10px;
+  }
+
+  .stats {
+    flex-direction: column;
+  }
+
+  .graphs-by-country {
+    flex-direction: column;
+  }
+}
+.graphs-by-country {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+
+.countries-list {
+  overflow-y: scroll;
+}
+
+.countries-list-container {
+  transition: all 0.2s;
 }

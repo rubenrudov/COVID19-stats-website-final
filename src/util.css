@@ -21,6 +21,16 @@
     font-size: 16px;
 }
 
+.population {
+    color: #000;
+    font-size: 16px;
+}
+
+.prntg {
+    color: #000;
+    font-size: 16px;
+}
+
 .info-flag img {
     padding: 15px;
     align-items: center;

@@ -18,6 +18,9 @@ export const sortData = (data) => {
 export const prettyPrintStat = (stat) =>
   stat ? `+${numeral(stat).format("0.0a")}` : "+0";
 
+
+var pers = (countryDeaths, countryPop) => numeral(countryDeaths)/ numeral(countryPop);
+
 export const showDataOnMap = (data) =>
   data.map((country) => (
     <Circle
@@ -43,6 +46,12 @@ export const showDataOnMap = (data) =>
           </div>
           <div className="deaths">
             Deaths: {numeral(country.deaths).format("0,0")}
+          </div>
+          <div className="population">
+            Population: {numeral(country.population).format("0,0")}
+          </div>
+          <div className="prntg">
+            Mortality rate: {pers(numeral(country.deaths).format("0,0"), numeral(country.population))}
           </div>
         </div>
       </Popup>
